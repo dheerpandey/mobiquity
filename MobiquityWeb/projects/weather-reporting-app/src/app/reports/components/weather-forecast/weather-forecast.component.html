@@ -1,0 +1,22 @@
+<div class="container">
+    <!-- TODO: Should be moved to shared component. -->
+    <mat-grid-list
+        [responsive]="responsive"
+        rowHeight="270px"
+        (responsiveColsChange)="cols = $event"
+        gutterSize="6px"
+    >
+        <mat-grid-tile *ngFor="let tile of tilesViewModel">
+            <a class="grid-list-item mat-body mat-elevation-z2" mat-ripple>
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>{{ tile.title }}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div [innerHTML]="tile.content"></div>
+                    </mat-card-content>
+                </mat-card>
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

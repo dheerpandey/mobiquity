@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+@import './../../../../theme.scss';
+
+.container {
+    padding: 1em;
+
+    .grid-list-item {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        padding: 0px;
+        width: calc(100% - 10px);
+        height: 250px;
+    }
+
+    mat-card {
+        width: 100%;
+    }
+}
